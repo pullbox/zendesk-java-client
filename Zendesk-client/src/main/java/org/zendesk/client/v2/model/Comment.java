@@ -13,6 +13,7 @@ import java.util.List;
 public class Comment {
     private Long id;
     private String body;
+    private String html_body;
     private Long authorId;
     private List<String> uploads;
     private List<Attachment> attachments;
@@ -22,7 +23,15 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(String body) {
+    public String getHtml_body() {
+		return html_body;
+	}
+
+	public void setHtml_body(String html_body) {
+		this.html_body = html_body;
+	}
+
+	public Comment(String body) {
         this.body = body;
     }
 
